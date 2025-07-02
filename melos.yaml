@@ -1,0 +1,15 @@
+name: sugodride          # anything, just a label
+sdkPath: .fvm/flutter_sdk   # optional: if you use FVM
+
+packages:
+  - app
+  - server
+  - shared_models
+
+scripts:
+  bootstrap: melos bootstrap
+  analyze: melos exec -- flutter analyze .
+  test: melos exec --dir-exists=test -- flutter test
+  format: melos exec -- dart format .
+
+# You can add more scripts later (build, release, etc.)
